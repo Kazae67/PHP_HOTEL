@@ -6,13 +6,11 @@
 class Client{
     private string $nom;
     private string $prenom;
-    private string $adresse;
     private DateTime $dateNaissance;
 
-    public function __construct(string $nom, string $prenom, string $adresse, $dateNaissance){
+    public function __construct(string $nom, string $prenom, $dateNaissance){
         $this->nom = $nom;
         $this->prenom = $prenom;
-        $this->adresse = $adresse;
         $this->dateNaissance = new DateTime($dateNaissance);
     }
 

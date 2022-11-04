@@ -2,42 +2,44 @@
 
 // Class
 Class Hotel{
-    private int $nbChambres;
-    private int $nbChambresReservees;
-    private int $nbChambresDispo;
+    private string $prenom;
+    private string $nom;
+    private string $adresse;
+    private array $chambres = [];
+    private array $reservations  = [];
 
-    public function __construct(int $nbChambres, int $nbChambresReservees, int $nbChambresDispo){
-        $this->nbChambres = $nbChambres;
-        $this->nbChambresReservees = $nbChambresReservees;
-        $this->nbChambresDispo = $nbChambresDispo;
+    public function __construct(string $prenom,string $nom, string $adresse){
+        $this->prenom = $prenom;
+        $this->nom = $nom;
+        $this->adresse = $adresse;
     }
 
     // Getters
-    public function getNbChambres():int{
-        return $this->nbChambres;
-     }
-    public function getNbChambresReservees():int{
-        return $this->nbChambresReservees;
+    public function getPrenom():string{
+        return $this->prenom;
     }
-    public function getNbChambresDispo():int{
-        return $this->nbChambresDispo;
+    public function getNom():string{
+        return $this->nom;
+    }
+    public function getAdresse():string{
+        return $this->adresse;
     }
 
     // Setters
-    public function setNbChambres(int $nbChambres){
-        $this->nbChambres = $nbChambres;
-        return $this->nbChambres;
+    public function setPrenom(string $prenom){
+        $this->prenom = $prenom;
+        return $this->prenom;
     }
-    public function setNbChambresReservees(int $nbChambresReservees){
-        $this->nbChambresReservees = $nbChambresReservees;
-        return $this->nbChambresReservees;
+    public function setNom(string $nom){
+        $this->nom = $nom;
+        return $this->nom;
     }
-    public function setNbChambresDispo(int $nbChambresDispo){
-        $this->nbChambresDispo = $nbChambresDispo;
-        return $this->nbChambresDispo;
+    public function setAdresse(string $adresse){
+        $this->adresse = $adresse;
+        return $this->adresse;
     }
 
-    // Convertir en string
+    // Convert to string
     public function __toString(){
         return "";
     }
