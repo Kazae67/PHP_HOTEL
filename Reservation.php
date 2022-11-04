@@ -51,3 +51,5 @@ Class Reservation{
 
 
 // Mettre un "if" pour qu'il marque "Aucune réservation" si le champ est vide
+
+?>

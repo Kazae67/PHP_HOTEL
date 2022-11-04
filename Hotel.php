@@ -44,3 +44,4 @@ Class Hotel{
         return "";
     }
 }
+?>

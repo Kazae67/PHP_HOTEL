@@ -66,6 +66,7 @@ Class Chambre{
     // Convert to string
     public function __toString(){
         return "";
-    }
-    
+    }  
+     
 }
+?>

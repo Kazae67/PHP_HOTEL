@@ -61,4 +61,6 @@ class Client{
         Adresse : $this->adresse
         Date de naissance : $this->dateNaissance";
     }
+
 }
+?>
