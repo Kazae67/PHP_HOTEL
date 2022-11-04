@@ -24,8 +24,14 @@ Class Reservation{
     public function getDateEntree():DateTime{
         return $this->dateEntree;
     }
+    public function getDateEntreeExact():string{
+        return $this->getDateEntree()->format("Y-m-d");
+    }
     public function getDateSortie():DateTime{
         return $this->dateSortie;
+    }
+    public function getDateSortieExact():string{
+        return $this->getDateSortie()->format("Y-m-d");
     }
     
     // Setters
@@ -47,6 +53,9 @@ Class Reservation{
     }
 
     // Convert en string
+    public function __toString(){
+        return "";
+    }
 }
 
 

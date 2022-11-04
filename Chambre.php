@@ -5,17 +5,20 @@ Class Chambre{
     private int $numChambre;
     private Hotel $hotel;
     private float $prix;
+    private string $devise;
     private int $nbLits;
     private bool $wifi;
     private bool $etat;
 
     // Construct
-    public function __construct(int $numChambre, Hotel $hotel, float $prix, int $nbLits, bool $wifi, bool $etat){
+    public function __construct(int $numChambre, Hotel $hotel, float $prix, string $devise, int $nbLits, bool $wifi, bool $etat){
         $this->numChambre = $numChambre;
         $this->hotel = $hotel;
         $this->prix = $prix;
+        $this->devise = $devise;
         $this->nbLits = $nbLits;
         $this->wifi = $wifi;
+        $this->etat = $etat;
     }
     // Getters
     public function getNumChambre():int{
@@ -26,6 +29,9 @@ Class Chambre{
     }
     public function getPrix():string{
         return $this->prix;
+    }
+    public function getDevise():string{
+        return $this->devise;
     }
     public function getNbLits():int{
         return $this->nbLits;
@@ -50,6 +56,10 @@ Class Chambre{
         $this->prix = $prix;
         return $this->prix;
     }
+    public function setDevise(string $devise){
+        $this->devise = $devise;
+        return $this->devise;
+    }
     public function setNbLits(int $nbLits){
         $this->nbLits = $nbLits;
         return $this->nbLits;
@@ -67,6 +77,6 @@ Class Chambre{
     public function __toString(){
         return "";
     }  
-     
+
 }
 ?>
