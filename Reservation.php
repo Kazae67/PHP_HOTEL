@@ -2,23 +2,25 @@
 
 // Class
 Class Reservation{
-    private string $client;
-    private int $chambre;
+    private Client $client;
+    private Chambre $chambre;
     private DateTime $dateEntree; 
     private DateTime $dateSortie;
 
-    public function __construct(string $client, int $chambre, string $dateEntree, string $dateSortie){
-        $this->chambre = $chambre;
+    public function __construct(Client $client, Chambre $chambre, string $dateEntree, string $dateSortie){
         $this->client = $client;
+        $this->client->nouveauClient($this);
+        $this->chambre = $chambre;
+        $this->chambre->nouvelleChambre($this);
         $this->dateEntree = new DateTime($dateEntree);
         $this->dateSortie = new DateTime($dateSortie);
     }
 
     // Getters
-    public function getClient():string{
+    public function getClient():Client{
         return $this->client;
     }
-    public function getChambre():int{
+    public function getChambre():Chambre{
         return $this->chambre;
     }
     public function getDateEntree():DateTime{
@@ -35,11 +37,11 @@ Class Reservation{
     }
     
     // Setters
-    public function setClient(string $client){
+    public function setClient(Client $client){
         $this->client = $client;
         return $this->client;
     }
-    public function setChambre(int $chambre){
+    public function setChambre(Chambre $chambre){
         $this->chambre = $chambre;
         return $this->chambre;
     }

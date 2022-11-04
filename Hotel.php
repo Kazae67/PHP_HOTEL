@@ -4,14 +4,22 @@
 Class Hotel{
     private string $nom;
     private string $adresse;
-    private array $chambres = [];
-    private array $reservations  = [];
+    private array $chambres;
+    private array $reservations;
 
     public function __construct(string $nom, string $adresse){
         $this->nom = $nom;
         $this->adresse = $adresse;
         $this->chambres = [];
         $this->reservation = [];
+    }
+
+    // Tableaux
+    public function tableauChambre(Chambre $chambres){
+        $this->chambres[] = $chambres;
+    }
+    public function tableauReservation(Reservation $reservation){
+        $this->reservations[] = $reservation;
     }
 
     // Getters
@@ -46,9 +54,19 @@ Class Hotel{
         return $this->reservation;
     }
 
+    // Infos
+    public function getEtatChambres(){
+        return $this->nom."<br> ".$this->adresse."<br>
+        Nombre de chambres : ".count($this->chambres)."<br>
+        Nombre de chambres réservées : ".count($this->reservations)."<br>
+        Nombre de chambres dispo : ".count($this->chambres) - count($this->reservation)."<br>";
+    }
+    
     // Convert to string
     public function __toString(){
-        return "Nom ".$this->nom;
+        return 
+        $this->nom."<br>".
+        $this->adresse;
     }
 }
 ?>
