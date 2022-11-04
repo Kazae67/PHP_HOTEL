@@ -1,6 +1,0 @@
-<?php
-
-// Class
-Class Prix{
-    
-}
