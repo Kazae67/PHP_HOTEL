@@ -6,12 +6,11 @@
 class Client{
     private string $nom;
     private string $prenom;
-    private DateTime $dateNaissance;
+    private array $reservation = [];
 
-    public function __construct(string $nom, string $prenom, $dateNaissance){
+    public function __construct(string $nom, string $prenom){
         $this->nom = $nom;
         $this->prenom = $prenom;
-        $this->dateNaissance = new DateTime($dateNaissance);
     }
 
     // Getters
@@ -21,16 +20,9 @@ class Client{
     public function getPrenom():string{
         return $this->prenom;
     }
-    public function getAdresse():string{
-        return $this->adresse;
+    public function getReservation():array{
+        return $this->reservation;
     }
-    public function getdateNaissance():DateTime{
-        return $this->dateNaissance;
-    }
-    public function getAge():string{
-        return $this->getDateNaissance()->format("d-m-Y");
-    }
-
     // Setters
 
     public function setNom(string $nom){
@@ -41,14 +33,11 @@ class Client{
         $this->prenom = $prenom;
         return $this->prenom;
     }
-    public function setAdresse(string $adresse){
-        $this->adresse = $adresse;
-        return $this->adresse;
+    public function setReservation(array $reservation){
+        $this->reservation = $reservation;
+        return $this->reservation;
     }
-    public function setDateNaissance(DateTime $dateNaissance){
-        $this->dateNaissance = $dateNaissance;
-        return $this->dateNaissance;
-    }
+
 
     // Function au préalable
 
@@ -56,10 +45,8 @@ class Client{
 
     public function __toString(){
         return "
-        Nom : $this->name
-        Prénom : $this->prenom
-        Adresse : $this->adresse
-        Date de naissance : $this->dateNaissance";
+        Nom : ".$this->nom." "."
+        Prénom : ".$this->prenom;
     }
 
 }
