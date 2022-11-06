@@ -30,7 +30,7 @@ Class Chambre{
     public function getHotel():Hotel{
         return $this->hotel;
     }
-    public function getPrix():string{
+    public function getPrix():float{
         return $this->prix;
     }
     public function getDevise():string{
@@ -41,9 +41,9 @@ Class Chambre{
     }
     public function getWifi():bool{
         if($this->wifi==true){
-            return "Wifi:Yes";
+            return "Wifi:Oui";
         }elseif($this->wifi==false){
-            return "Wifi:No";
+            return "Wifi:Non";
         }
     }
     public function getEtat():bool{
@@ -66,7 +66,7 @@ Class Chambre{
         $this->hotel = $hotel;
         return $this->hotel;
     }
-    public function setPrix(int $prix){
+    public function setPrix(float $prix){
         $this->prix = $prix;
         return $this->prix;
     }
@@ -93,6 +93,12 @@ Class Chambre{
     // Tableaux
     public function ajouterReservation($reservation){
         $this->reservations[] = $reservation;
+    }
+    public function afficherReservation(){
+        echo "$this->numChambre réserve :";
+        foreach($this->reservations as $reservation){
+            echo $reservation . "<br>";
+        }
     }
 
     // Convert to string
