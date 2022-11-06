@@ -72,8 +72,7 @@ Class Reservation{
 
     // Convert en string
     public function __toString(){
-        return 
-        $this->dateEntree->format('d/m/Y')." au ".$this->dateSortie->format('d/m/Y');
+        return "";
     }
 }
 

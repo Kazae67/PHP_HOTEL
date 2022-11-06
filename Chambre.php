@@ -48,9 +48,9 @@ Class Chambre{
     }
     public function getEtat():bool{
         if($this->etat==true){
-            return "Etat:Réservée";
+            return "Etat:RÉSERVÉE";
         }elseif($this->etat==false){
-            return "Etat:Disponible";
+            return "Etat:DISPONIBLE";
         }
     }
     public function getReservations(){
