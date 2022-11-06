@@ -16,8 +16,8 @@ spl_autoload_register(function ($class_name) {
 $hotelHiltonStrasbourg = new Hotel("Hitlon **** Strasbourg", "10 route de la Gare 67000 STRASBOURG");
 $hotelRegentParis = new Hotel("Regent **** Paris", "");
 // C H A M B R E S
-$chambreHiltonStrasbourg1 = new Chambre(1, $hotelHiltonStrasbourg, 120, 2, false, true);
-$chambreHiltonStrasbourg2 = new Chambre(2, $hotelHiltonStrasbourg, 120, 2, false, true);
+$chambreHiltonStrasbourg1 = new Chambre(1, $hotelHiltonStrasbourg, 120, 2, true, true);
+$chambreHiltonStrasbourg2 = new Chambre(2, $hotelHiltonStrasbourg, 120, 2, true, true);
 $chambreHiltonStrasbourg3 = new Chambre(3, $hotelHiltonStrasbourg, 120, 2, false, true);
 $chambreHiltonStrasbourg4 = new Chambre(4, $hotelHiltonStrasbourg, 120, 2, false, true);
 $chambreHiltonStrasbourg5 = new Chambre(5, $hotelHiltonStrasbourg, 120, 2, false, true);

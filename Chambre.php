@@ -35,7 +35,7 @@ Class Chambre{
     public function getNbLits():int{
         return $this->nbLits;
     }
-    public function getWifi():bool{
+    public function getWifi(){
         if($this->wifi==true){
             return "Wifi:Oui";
         }elseif($this->wifi==false){
