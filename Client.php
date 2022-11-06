@@ -48,7 +48,7 @@ class Client{
     public function afficherReservation(){
         echo "Réservations de ".$this->prenom." ".$this->nom."<br>";
         foreach($this->reservations as $reservation){
-            echo $reservation->syntheseReservation().$reservation. "<br>";    
+            echo $reservation->dateReservation().$reservation. "<br>";    
         }
     }
     

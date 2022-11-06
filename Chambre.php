@@ -36,9 +36,9 @@ Class Chambre{
     }
     public function getWifi(){
         if($this->wifi==true){
-            return "Wifi:Oui";
+            return "Wifi: oui";
         }elseif($this->wifi==false){
-            return "Wifi:Non";
+            return "Wifi: non";
         }
     }
     public function getEtat():bool{

@@ -73,7 +73,7 @@ Class Hotel{
         if ($this->getReservations()>=1){
             echo "Réservations de l'hôtel : ".$this->nom."<br>".$this->getReservations()." Réservations<br>";
             foreach($this->reservations as $reservation){
-                echo $reservation->dateReservation(). "<br>";
+                echo $reservation->syntheseReservation(). "<br>";
             }
         }else{
             echo "Réservations de l'hôtel : ".$this->nom;
