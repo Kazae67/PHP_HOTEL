@@ -54,10 +54,12 @@ Class Hotel{
         return $this->reservation;
     }
 
-    // Function
+    // Chambres disponibles
     public function chambreDispo(){
         return $this->getChambres() - $this->getReservations();
     }
+
+    // Afficher l'hotel
     public function afficherHotel(){
         return " 
         Nombre de chambres : ".$this->getChambres()."<br>
@@ -65,6 +67,8 @@ Class Hotel{
         Nombre de chambres dispo : ".$this->chambreDispo()."<br> 
         <br>";
     }
+
+    // Afficher  les reservations
     public function afficherReservation(){
         if ($this->getReservations()>=1){
             echo "Réservations de l'hôtel : ".$this->nom."<br>".$this->getReservations()." Réservations<br>";

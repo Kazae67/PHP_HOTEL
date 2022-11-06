@@ -44,7 +44,7 @@ class Client{
         return $this->reservation;
     }
 
-    // Functions
+    // Afficher reservation
     public function afficherReservation(){
         echo "Réservations de $this->prenom $this->nom<br>";
         foreach($this->reservations as $reservation){

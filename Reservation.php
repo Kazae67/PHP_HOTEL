@@ -63,8 +63,10 @@ Class Reservation{
         return 
         $this->client->getPrenom()." ".$this->client->getNom()." - Chambre ".$this->chambre->getNumChambre()." - du ".$this->dateEntree->format('d/m/Y')." au ".$this->dateSortie->format("d/m/Y");
     }   
+
+    // Synthèse de la réservation
     public function syntheseReservation(){
-        return "Hotel: ".$this->hotel->getNom()." / Chambre : ".$this->chambre->getNumChambre()." (".$this->chambre->getNbLits()." lits -".$this->chambre->getPrix()." € - ".$this->chambre->getWifi().")";
+        return "Hotel: ".$this->hotel->getNom()." / Chambre : ".$this->chambre->getNumChambre()." (".$this->chambre->getNbLits()." lits - ".$this->chambre->getPrix()." € - ".$this->chambre->getWifi().")";
     } 
 
     // Convert en string
