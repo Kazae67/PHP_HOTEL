@@ -81,6 +81,7 @@ Class Hotel{
         }
     }
 
+
     // Convert to string
     public function __toString(){
         return 

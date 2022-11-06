@@ -86,12 +86,6 @@ Class Chambre{
     public function ajouterReservation($reservation){
         $this->reservations[] = $reservation;
     }
-    public function afficherReservation(){
-        echo "$this->numChambre réserve :";
-        foreach($this->reservations as $reservation){
-            echo $reservation . "<br>";
-        }
-    }
 
     // Convert to string
     public function __toString(){

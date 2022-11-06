@@ -53,7 +53,6 @@ class Client{
     }
 
     // Convertir en string
-
     public function __toString(){
         return "
         Nom : ".$this->nom." "."
