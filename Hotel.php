@@ -81,12 +81,15 @@ Class Hotel{
         }
     }
 
-
     // Convert to string
     public function __toString(){
         return 
         $this->nom."<br>".
-        $this->adresse."<br>";
+        $this->adresse."<br>
+        Nombre de chambres : ".$this->getChambres()."<br>
+        Nombre de réservation : ".$this->getReservations()."<br>
+        Chambre libres : ".$this->chambreDispo()."<br>
+        <br>";
     }
 }
 ?>

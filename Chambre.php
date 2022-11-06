@@ -16,7 +16,6 @@ Class Chambre{
         $this->hotel = $hotel;
         $this->hotel->ajouterChambre($this);
         $this->prix = $prix;
-
         $this->nbLits = $nbLits;
         $this->wifi = $wifi;
         $this->etat = $etat;

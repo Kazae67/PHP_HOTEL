@@ -7,6 +7,7 @@ Class Reservation{
     private Hotel $hotel;
     private DateTime $dateEntree; 
     private DateTime $dateSortie;
+    private int $nbJours;
 
     public function __construct(Client $client, Chambre $chambre, Hotel $hotel, string $dateEntree, string $dateSortie){
         $this->client = $client;
@@ -17,6 +18,7 @@ Class Reservation{
         $this->client->ajouterReservation($this);
         $this->chambre->ajouterReservation($this);
         $this->hotel->ajouterReservation($this);
+        $this->nbJours = $this->dateEntree->diff($this->dateSortie)->format("%d");
     }
 
     // Getters
@@ -34,6 +36,9 @@ Class Reservation{
     }
     public function getDateSortie():DateTime{
         return $this->dateSortie;
+    }
+    public function getNbJours():int{
+        return $this->nbJours;
     }
     
     // Setters
