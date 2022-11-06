@@ -76,7 +76,7 @@ Class Hotel{
                 echo $reservation->dateReservation(). "<br>";
             }
         }else{
-            echo "Réservations de l'hôtel : ".$this->nom."<br>";
+            echo "Réservations de l'hôtel : ".$this->nom;
             echo "<br>Aucune réservation !<br>";
         }
     }
