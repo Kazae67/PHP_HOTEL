@@ -9,16 +9,19 @@ Class Chambre{
     private int $nbLits;
     private bool $wifi;
     private bool $etat;
+    private $reservations;
 
     // Construct
     public function __construct(int $numChambre, Hotel $hotel, float $prix, string $devise, int $nbLits, bool $wifi, bool $etat){
         $this->numChambre = $numChambre;
         $this->hotel = $hotel;
+        $this->hotel->ajouterChambre($this);
         $this->prix = $prix;
         $this->devise = $devise;
         $this->nbLits = $nbLits;
         $this->wifi = $wifi;
         $this->etat = $etat;
+        $this->reservations=[];
     }
     // Getters
     public function getNumChambre():int{
@@ -37,10 +40,21 @@ Class Chambre{
         return $this->nbLits;
     }
     public function getWifi():bool{
-        return $this->wifi;
+        if($this->wifi==true){
+            return "Wifi:Yes";
+        }elseif($this->wifi==false){
+            return "Wifi:No";
+        }
     }
     public function getEtat():bool{
-        return $this->etat;
+        if($this->etat==true){
+            return "Etat:Réservée";
+        }elseif($this->etat==false){
+            return "Etat:Disponible";
+        }
+    }
+    public function getReservations(){
+        return $this->reservations;
     }
 
     // Setters
@@ -71,6 +85,14 @@ Class Chambre{
     public function setEtat(bool $etat){
         $this->etat = $etat;
         return $this->etat;
+    }
+    public function setReservations($reservations){
+        return $this->reservations = $reservations;
+    }
+
+    // Tableaux
+    public function ajouterReservation($reservation){
+        $this->reservations[] = $reservation;
     }
 
     // Convert to string

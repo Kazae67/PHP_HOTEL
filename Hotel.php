@@ -11,14 +11,14 @@ Class Hotel{
         $this->nom = $nom;
         $this->adresse = $adresse;
         $this->chambres = [];
-        $this->reservation = [];
+        $this->reservations = [];
     }
 
     // Tableaux
-    public function tableauChambre(Chambre $chambres){
-        $this->chambres[] = $chambres;
+    public function ajouterChambre($chambre){
+        $this->chambres[] = $chambre;
     }
-    public function tableauReservation(Reservation $reservation){
+    public function ajouterReservation($reservation){
         $this->reservations[] = $reservation;
     }
 
@@ -29,11 +29,11 @@ Class Hotel{
     public function getAdresse():string{
         return $this->adresse;
     }
-    public function getChambres():array{
-        return $this->chambres;
+    public function getChambres(){
+        return count($this->chambres);
     }
-    public function getReservation():array{
-        return $this->reservations;
+    public function getReservations(){
+        return count($this->reservations);
     }
 
     // Setters
@@ -49,24 +49,39 @@ Class Hotel{
         $this->chambres = $chambres;
         return $this->chambres;
     }
-    public function setReservation(array $reservation){
+    public function setReservations(array $reservation){
         $this->reservation = $reservation;
         return $this->reservation;
     }
 
-    // Infos
-    public function getEtatChambres(){
-        return $this->nom."<br> ".$this->adresse."<br>
-        Nombre de chambres : ".count($this->chambres)."<br>
-        Nombre de chambres réservées : ".count($this->reservations)."<br>
-        Nombre de chambres dispo : ".count($this->chambres) - count($this->reservation)."<br>";
+    // Function
+    public function chambreDispo(){
+        return $this->getChambres() - $this->getReservations();
     }
-    
+    public function afficherHotel(){
+        return " 
+        Nombre de chambres : ".$this->getChambres()."<br>
+        Nombre de chambres réservées : ".$this->getReservations()."<br>
+        Nombre de chambres dispo : ".$this->chambreDispo()."<br> 
+        <br>";
+    }
+    public function afficherReservation(){
+        if ($this->getReservations()>=1){
+            echo "Réservations de l'hôtel : ".$this->nom."<br>".$this->getReservations()." Réservations<br>";
+            foreach($this->reservations as $reservation){
+                echo $reservation->dateReservation(). "<br>";
+            }
+        }else{
+            echo "Réservations de l'hôtel : ".$this->nom."<br>".$this->getReservations()." Réservations<br>";
+            echo "<br>Aucune réservation !<br>";
+        }
+    }
+
     // Convert to string
     public function __toString(){
         return 
         $this->nom."<br>".
-        $this->adresse;
+        $this->adresse."<br>";
     }
 }
 ?>

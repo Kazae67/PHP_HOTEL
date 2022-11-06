@@ -4,16 +4,19 @@
 Class Reservation{
     private Client $client;
     private Chambre $chambre;
+    private Hotel $hotel;
     private DateTime $dateEntree; 
     private DateTime $dateSortie;
 
-    public function __construct(Client $client, Chambre $chambre, string $dateEntree, string $dateSortie){
+    public function __construct(Client $client, Chambre $chambre, Hotel $hotel, string $dateEntree, string $dateSortie){
         $this->client = $client;
-        $this->client->nouveauClient($this);
         $this->chambre = $chambre;
-        $this->chambre->nouvelleChambre($this);
+        $this->hotel = $hotel;
         $this->dateEntree = new DateTime($dateEntree);
         $this->dateSortie = new DateTime($dateSortie);
+        $this->client->ajouterReservation($this);
+        $this->chambre->ajouterReservation($this);
+        $this->hotel->ajouterReservation($this);
     }
 
     // Getters
@@ -22,6 +25,9 @@ Class Reservation{
     }
     public function getChambre():Chambre{
         return $this->chambre;
+    }
+    public function getHotel():Hotel{
+        return $this->hotel;
     }
     public function getDateEntree():DateTime{
         return $this->dateEntree;
@@ -45,6 +51,10 @@ Class Reservation{
         $this->chambre = $chambre;
         return $this->chambre;
     }
+    public function setHotel(Hotel $hotel){
+        $this->hotel = $hotel;
+        return $this->hotel;
+    }
     public function setDateEntree(DateTime $dateEntree){
         $this->dateEntree = $dateEntree;
         return $this->dateEntree;
@@ -54,9 +64,16 @@ Class Reservation{
         return $this->dateSortie;
     }
 
+    // Function
+    public function dateReservation(){
+        return 
+        $this->client->getPrenom()." ".$this->client->getNom()." - Chambre ".$this->chambre->getNumChambre()." - du ".$this->dateEntree->format('d/m/Y')." au ".$this->dateSortie->format("d/m/Y");
+    }       
+
     // Convert en string
     public function __toString(){
-        return "";
+        return 
+        $this->dateEntree->format('d/m/Y')." au ".$this->dateSortie->format('d/m/Y');
     }
 }
 

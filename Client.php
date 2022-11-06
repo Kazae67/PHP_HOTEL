@@ -4,42 +4,42 @@
 
 // class
 class Client{
-    private string $nom;
     private string $prenom;
-    private array $reservation;
+    private string $nom;
+    private array $reservations;
 
-    public function __construct(string $nom, string $prenom){
-        $this->nom = $nom;
+    public function __construct(string $prenom, string $nom){
         $this->prenom = $prenom;
-        $this->reservation = [];
+        $this->nom = $nom;
+        $this->reservations = [];
     }
 
     // Tableau
-    public function tableauReservation(Reservation $reservation){
-        $this->reservation[] = $reservation;
+    public function ajouterReservation($reservation){
+        $this->reservations[] = $reservation;
     }
 
     // Getters
-    public function getNom():string{
-        return $this->nom;
-    }
     public function getPrenom():string{
         return $this->prenom;
     }
-    public function getReservation():array{
+    public function getNom():string{
+        return $this->nom;
+    }
+    public function getReservations():array{
         return $this->reservation;
     }
     // Setters
 
-    public function setNom(string $nom){
-        $this->nom = $nom;
-        return $this->nom;
-    }
     public function setPrenom(string $prenom){
         $this->prenom = $prenom;
         return $this->prenom;
     }
-    public function setReservation(array $reservation){
+    public function setNom(string $nom){
+        $this->nom = $nom;
+        return $this->nom;
+    }
+    public function setReservations(array $reservation){
         $this->reservation = $reservation;
         return $this->reservation;
     }
