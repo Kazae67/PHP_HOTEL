@@ -55,6 +55,7 @@ class Client{
         
     }
     
+    // Afficher total
     public function afficherTotalReservations() {
         $total = 0;
         foreach($this->reservations as $resarvation) {
@@ -67,6 +68,8 @@ class Client{
     public function __toString(){
         return "";
     }
+
+
 
 }
 ?>

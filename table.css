@@ -21,6 +21,7 @@ table, caption, th, td {
         animation-duration: 10s; 
         animation-iteration-count:1;
     }
+
     
     @keyframes animation {
         0%   {background-color:rgb(255, 255, 255); left:0px; top:0px;}
@@ -30,4 +31,5 @@ table, caption, th, td {
         30% {text-shadow: 3px 1px 3px rgb(240, 237, 198)}
         40% {text-shadow: 3px 1px 3px rgb(255, 255, 255);}
       }
+      
       

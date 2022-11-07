@@ -37,9 +37,9 @@ $chambreHiltonStrasbourg17 = new Chambre(17, $hotelHiltonStrasbourg, 120, 2, fal
 $virgile = new Client("Virgile", "GIBELLO");
 $micka = new Client("Micka", "MURMANN");
 // R E S E R V A T I O N S
-$reservation1 = new Reservation($virgile, $chambreHiltonStrasbourg1, $hotelHiltonStrasbourg, "01/01/2021", "01/01/2021");
-$reservation2 = new Reservation($micka, $chambreHiltonStrasbourg2, $hotelHiltonStrasbourg, "11/03/2021", "11/03/2021");
-$reservation3 = new Reservation($micka, $chambreHiltonStrasbourg3, $hotelHiltonStrasbourg, "01/04/2021", "01/04/2021");
+$reservation1 = new Reservation($virgile, $chambreHiltonStrasbourg1, $hotelHiltonStrasbourg, "01-01-2021", "08-01-2021");
+$reservation2 = new Reservation($micka, $chambreHiltonStrasbourg2, $hotelHiltonStrasbourg, "11-03-2021", "13-03-2021");
+$reservation3 = new Reservation($micka, $chambreHiltonStrasbourg3, $hotelHiltonStrasbourg, "01-04-2021", "05-04-2021");
 // A F F I C H A G E S
 echo $hotelHiltonStrasbourg;
 echo $hotelHiltonStrasbourg->afficherReservations();
