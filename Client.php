@@ -46,13 +46,15 @@ class Client{
 
     // Afficher reservation
     public function afficherReservation(){
-        echo "Réservations de ".$this->prenom." ".$this->nom."<br>";
+        $result = "Réservations de ".$this->prenom." ".$this->nom."<br>";
+        $result .= count($this->reservations)." Reservations<br>";
         foreach($this->reservations as $reservation){
-            echo $reservation->syntheseReservation()."<br>";    
+            $result .= $reservation->syntheseReservation()."<br>";    
         }
+        return $result;
         
     }
-
+    
     public function afficherTotalReservation() {
         $total = 0;
         foreach($this->reservations as $resarvation) {

@@ -21,6 +21,12 @@ Class Chambre{
         $this->etat = $etat;
         $this->reservations=[];
     }
+
+    // Tableaux
+    public function ajouterReservation($reservation){
+        $this->reservations[] = $reservation;
+    }
+    
     // Getters
     public function getNumChambre():int{
         return $this->numChambre;
@@ -81,10 +87,7 @@ Class Chambre{
         return $this->reservations = $reservations;
     }
 
-    // Tableaux
-    public function ajouterReservation($reservation){
-        $this->reservations[] = $reservation;
-    }
+
 
     // Convert to string
     public function __toString(){
