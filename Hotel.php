@@ -69,11 +69,11 @@ Class Hotel{
     }
 
     // Afficher  les reservations
-    public function afficherReservation(){
+    public function afficherReservations(){
         if ($this->getReservations()>=1){
             echo "Réservations de l'hôtel : ".$this->nom."<br>".$this->getReservations()." Réservations<br>";
             foreach($this->reservations as $reservation){
-                echo $reservation->syntheseReservation(). "<br>";
+                echo $reservation->syntheseReservations(). "<br>";
             }
         }else{
             echo "Réservations de l'hôtel : ".$this->nom;

@@ -42,12 +42,12 @@ $reservation2 = new Reservation($micka, $chambreHiltonStrasbourg2, $hotelHiltonS
 $reservation3 = new Reservation($micka, $chambreHiltonStrasbourg3, $hotelHiltonStrasbourg, "01/04/2021", "01/04/2021");
 // A F F I C H A G E S
 echo $hotelHiltonStrasbourg;
-echo $hotelHiltonStrasbourg->afficherReservation();
+echo $hotelHiltonStrasbourg->afficherReservations();
 echo "<br>";
-echo $hotelRegentParis->afficherReservation();
+echo $hotelRegentParis->afficherReservations();
 echo "<br>";
-echo $micka->afficherReservation();
-echo $micka->afficherTotalReservation()
+echo $micka->afficherReservations();
+echo $micka->afficherTotalReservations()
 
 
 ?>

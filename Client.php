@@ -45,29 +45,27 @@ class Client{
     }
 
     // Afficher reservation
-    public function afficherReservation(){
+    public function afficherReservations(){
         $result = "Réservations de ".$this->prenom." ".$this->nom."<br>";
         $result .= count($this->reservations)." Reservations<br>";
         foreach($this->reservations as $reservation){
-            $result .= $reservation->syntheseReservation()."<br>";    
+            $result .= $reservation->dateReservations()."<br>";    
         }
         return $result;
         
     }
     
-    public function afficherTotalReservation() {
+    public function afficherTotalReservations() {
         $total = 0;
         foreach($this->reservations as $resarvation) {
             $total += $resarvation->getNbJours() * $resarvation->getChambre()->getPrix();
         }
-        return "Total : $total €<br/>";
+        return "Total : $total €<br>"; // POURQUOI CA MARCHE PAS !?
     }    
 
     // Convertir en string
     public function __toString(){
-        return "
-        Nom : ".$this->nom." "."
-        Prénom : ".$this->prenom;
+        return "";
     }
 
 }
