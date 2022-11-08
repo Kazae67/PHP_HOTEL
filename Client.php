@@ -44,7 +44,7 @@ class Client{
         return $this->reservation;
     }
 
-    // Afficher reservation
+    // Afficher les dates de réservations
     public function afficherReservations(){
         $result = "Réservations de ".$this->prenom." ".$this->nom."<br>";
         $result .= count($this->reservations)." Reservations<br>";
@@ -55,13 +55,13 @@ class Client{
         
     }
     
-    // Afficher total
+    // Afficher le total des reservations
     public function afficherTotalReservations() {
         $total = 0;
         foreach($this->reservations as $resarvation) {
             $total += $resarvation->getNbJours() * $resarvation->getChambre()->getPrix();
         }
-        return "Total : $total €<br>"; // POURQUOI CA MARCHE PAS !?
+        return "Total : $total €<br>";
     }    
 
     // Convertir en string

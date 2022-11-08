@@ -68,7 +68,7 @@ Class Hotel{
         <br>";
     }
 
-    // Afficher  les reservations
+    // Afficher  synthese des réservations
     public function afficherReservations(){
         if ($this->getReservations()>=1){
             echo "Réservations de l'hôtel : ".$this->nom."<br>".$this->getReservations()." Réservations<br>";
@@ -79,6 +79,11 @@ Class Hotel{
             echo "Réservations de l'hôtel : ".$this->nom;
             echo "<br>Aucune réservation !<br>";
         }
+    }
+
+    // Afficher statuts des chambres
+    public function afficherStatutsChambres(){
+        echo "Statuts des chambres de : ".$this->nom;
     }
 
     // Convert to string
