@@ -87,8 +87,6 @@ Class Chambre{
         return $this->reservations = $reservations;
     }
 
-
-
     // Convert to string
     public function __toString(){
         return "";

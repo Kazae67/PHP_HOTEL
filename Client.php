@@ -14,7 +14,7 @@ class Client{
         $this->reservations = [];
     }
 
-    // Tableau
+    // Tableaux
     public function ajouterReservation($reservation){
         $this->reservations[] = $reservation;
     }
@@ -68,8 +68,6 @@ class Client{
     public function __toString(){
         return "";
     }
-
-
 
 }
 ?>
