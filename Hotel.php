@@ -24,7 +24,7 @@ Class Hotel{
 
     // Getters
     public function getNom():string{
-        return $this->nom;
+        return "$this->nom";
     }
     public function getAdresse():string{
         return $this->adresse;
@@ -54,6 +54,10 @@ Class Hotel{
         return $this->reservation;
     }
 
+    // Afficher le nom
+    public function afficherNom(){
+        return "$this->nom";
+    }
     // Chambres disponibles
     public function chambreDispo(){
         return $this->getChambres() - $this->getReservations();
@@ -71,19 +75,19 @@ Class Hotel{
     // Afficher  synthese des réservations
     public function afficherReservations(){
         if ($this->getReservations()>=1){
-            echo "Réservations de l'hôtel : ".$this->nom."<br>".$this->getReservations()." Réservations<br>";
+            echo "<strong>Réservations de l'hôtel : ".$this->nom."</strong><br>".$this->getReservations()." Réservations<br>";
             foreach($this->reservations as $reservation){
                 echo $reservation->syntheseReservations(). "<br>";
             }
         }else{
-            echo "Réservations de l'hôtel : ".$this->nom;
+            echo "<strong>Réservations de l'hôtel : ".$this->nom."</strong>";
             echo "<br>Aucune réservation !<br>";
         }
     }
 
     // Afficher statuts des chambres
     public function afficherStatutsChambres(){
-        echo "Statuts des chambres de : ".$this->nom."<br>";
+        echo "Statuts des chambres de <strong>".$this->nom."</strong><br>";
         foreach($this->chambres as $chambre){
             echo "Chambre ".$chambre->getNumChambre()." ".$chambre->getPrix()." € ".$chambre->getWifi()." ".$chambre->getEtat()."<br>";
         }
@@ -96,7 +100,7 @@ Class Hotel{
         $this->adresse."<br>
         Nombre de chambres : ".$this->getChambres()."<br>
         Nombre de réservation : ".$this->getReservations()."<br>
-        Chambre libres : ".$this->chambreDispo()."<br>
+        Nombre de chambre dispo : ".$this->chambreDispo()."<br>
         <br>";
     }
 }

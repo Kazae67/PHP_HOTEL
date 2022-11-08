@@ -2,18 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="table.css">
+    <link rel="stylesheet" href="form.css">
     <title>Hotel</title>
 </head>
 <body>
-
+    <h1>POO HOTEL</h1>
 <?php
 spl_autoload_register(function ($class_name) {
     require $class_name . '.php';
 });
 
+
+
 // H O T E L  + V I L L E 
-$hotelHiltonStrasbourg = new Hotel("Hitlon **** Strasbourg", "10 route de la Gare 67000 STRASBOURG");
+$hotelHiltonStrasbourg = new Hotel("<strong>Hitlon **** Strasbourg</strong>", "10 route de la Gare 67000 STRASBOURG");
 $hotelRegentParis = new Hotel("Regent **** Paris", "");
 // C H A M B R E S
 // essayer un (range) [experience]
