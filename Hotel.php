@@ -83,7 +83,10 @@ Class Hotel{
 
     // Afficher statuts des chambres
     public function afficherStatutsChambres(){
-        echo "Statuts des chambres de : ".$this->nom;
+        echo "Statuts des chambres de : ".$this->nom."<br>";
+        foreach($this->chambres as $chambre){
+            echo "Chambre ".$chambre->getNumChambre()." ".$chambre->getPrix()." € ".$chambre->getWifi()." ".$chambre->getEtat()."<br>";
+        }
     }
 
     // Convert to string

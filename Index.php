@@ -17,9 +17,9 @@ $hotelHiltonStrasbourg = new Hotel("Hitlon **** Strasbourg", "10 route de la Gar
 $hotelRegentParis = new Hotel("Regent **** Paris", "");
 // C H A M B R E S
 // essayer un (range) [experience]
-$chambreHiltonStrasbourg1 = new Chambre(1, $hotelHiltonStrasbourg, 120, 2, true, true);
-$chambreHiltonStrasbourg2 = new Chambre(2, $hotelHiltonStrasbourg, 120, 2, true, true);
-$chambreHiltonStrasbourg3 = new Chambre(3, $hotelHiltonStrasbourg, 120, 2, false, true);
+$chambreHiltonStrasbourg1 = new Chambre(1, $hotelHiltonStrasbourg, 120, 2, true, false);
+$chambreHiltonStrasbourg2 = new Chambre(2, $hotelHiltonStrasbourg, 120, 2, true, false);
+$chambreHiltonStrasbourg3 = new Chambre(3, $hotelHiltonStrasbourg, 120, 2, true, false);
 $chambreHiltonStrasbourg4 = new Chambre(4, $hotelHiltonStrasbourg, 120, 2, false, true);
 $chambreHiltonStrasbourg5 = new Chambre(5, $hotelHiltonStrasbourg, 120, 2, false, true);
 $chambreHiltonStrasbourg6 = new Chambre(6, $hotelHiltonStrasbourg, 120, 2, false, true);

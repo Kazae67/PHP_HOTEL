@@ -66,7 +66,9 @@ class Client{
 
     // Convertir en string
     public function __toString(){
-        return "";
+        return 
+        $this->prenom." ".
+        $this->nom;
     }
 
 }

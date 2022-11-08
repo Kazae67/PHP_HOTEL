@@ -47,11 +47,11 @@ Class Chambre{
             return "Wifi: non";
         }
     }
-    public function getEtat():bool{
+    public function getEtat(){
         if($this->etat==true){
-            return "Etat:RÉSERVÉE";
+            return "Etat: DISPONIBLE";
         }elseif($this->etat==false){
-            return "Etat:DISPONIBLE";
+            return "Etat: RÉSERVÉE";
         }
     }
     public function getReservations(){
