@@ -47,7 +47,7 @@ class Client{
     // Afficher les dates de réservations
     public function afficherReservations(){
         $result = "<strong>Réservations de ".$this->prenom." ".$this->nom."</strong><br>";
-        $result .= count($this->reservations)." Reservations<br>";
+        $result .= "<span class='dispo'>".count($this->reservations)." Reservations</span><br>";
         foreach($this->reservations as $reservation){
             $result .= $reservation->dateReservations()."<br>";    
         }
