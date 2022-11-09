@@ -18,7 +18,7 @@ Class Reservation{
         $this->client->ajouterReservation($this);
         $this->chambre->ajouterReservation($this);
         $this->hotel->ajouterReservation($this);
-        $this->nbJours = $this->dateEntree->diff($this->dateSortie)->format("%d");
+        $this->nbJours = $this->dateEntree->diff($this->dateSortie)->format("%d"); // "%d" pour sortir un nombre / "%s" pour sortir un string
     }
 
     // Getters

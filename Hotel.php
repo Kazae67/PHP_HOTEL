@@ -93,7 +93,6 @@ Class Hotel{
         }
     }
 
-
     // Test tableau
     // Afficher statuts des chambres avec table
     public function afficherStatutsTable(){
@@ -103,8 +102,6 @@ Class Hotel{
         }
     }
         
-    
-
     // Convert to string
     public function __toString(){
         return 
