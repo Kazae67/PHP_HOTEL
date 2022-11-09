@@ -42,16 +42,16 @@ Class Chambre{
     }
     public function getWifi(){
         if($this->wifi==true){
-            return "Wifi: oui";
+            return "oui";
         }elseif($this->wifi==false){
-            return "Wifi: non";
+            return "non";
         }
     }
     public function getEtat(){
         if($this->etat){
-            return "Etat: <span class='dispo'>DISPONIBLE</span>";
+            return "<span class='dispo'>DISPONIBLE</span>";
         }else{
-            return "Etat: <span class='reservee'>RÉSERVÉE</span>";
+            return "<span class='reservee'>RÉSERVÉE</span>";
         }
     }
     public function getReservations(){

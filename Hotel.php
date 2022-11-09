@@ -93,6 +93,18 @@ Class Hotel{
         }
     }
 
+
+    // Test tableau
+    // Afficher statuts des chambres avec table
+    public function afficherStatutsTable(){
+        echo "<table><tr><th>CHAMBRE</th><th>PRIX</th><th>WIFI</th><th>ÉTAT</th></tr>";
+        foreach($this->chambres as $chambre){
+            echo "<tr><th>Chambre ".$chambre->getNumChambre()."</th><th>".$chambre->getPrix()."</th><th>".$chambre->getWifi()."</th><th>".$chambre->getEtat()."</th></th></tr>"; // Gros titres   
+        }
+    }
+        
+    
+
     // Convert to string
     public function __toString(){
         return 

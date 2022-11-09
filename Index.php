@@ -52,7 +52,9 @@ echo "<br>";
 echo $micka->afficherReservations();
 echo $micka->afficherTotalReservations();
 echo "<br>";
-echo $hotelHiltonStrasbourg->afficherStatutsChambres();
+echo $hotelHiltonStrasbourg->afficherStatutsTable();
+
+
 ?>
 </body>
 </html>
