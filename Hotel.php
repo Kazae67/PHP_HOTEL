@@ -97,9 +97,9 @@ Class Hotel{
     // Test tableau
     // Afficher statuts des chambres avec table
     public function afficherStatutsTable(){
-        echo "<table><tr><th>CHAMBRE</th><th>PRIX</th><th>WIFI</th><th>ÉTAT</th></tr>";
+        echo "<table><tr><th>CHAMBRE</th><th>PRIX</th><th>WIFI</th><th>ÉTAT</th></tr>"; // gros titre
         foreach($this->chambres as $chambre){
-            echo "<tr><th>Chambre ".$chambre->getNumChambre()."</th><th>".$chambre->getPrix()."</th><th>".$chambre->getWifi()."</th><th>".$chambre->getEtat()."</th></th></tr>"; // Gros titres   
+            echo "<tr><th>Chambre ".$chambre->getNumChambre()."</th><th>".$chambre->getPrix()."€</th><th>".$chambre->getWifiIcon()."</th><th>".$chambre->getEtat()."</th></th></tr>"; // Gros titres   
         }
     }
         

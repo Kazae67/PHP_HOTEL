@@ -47,6 +47,13 @@ Class Chambre{
             return "non";
         }
     }
+    public function getWifiIcon(){
+        if($this->wifi==true){
+            return "<span class='icon1'></span>";
+        }elseif($this->wifi==false){
+            return "<span class='icon2'></span>";
+        }
+    }
     public function getEtat(){
         if($this->etat){
             return "<span class='dispo'>DISPONIBLE</span>";
