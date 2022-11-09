@@ -49,7 +49,7 @@ Class Chambre{
     }
     public function getEtat(){
         if($this->etat){
-            return "<span class='dispo'>CHAMBRE DISPONIBLE</span>";
+            return "<span class='dispo'>DISPONIBLE</span>";
         }else{
             return "<span class='reservee'>RÉSERVÉE</span>";
         }
